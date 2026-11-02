@@ -2,8 +2,9 @@
 
 **Nothing in this repository has run on an S9+.** Nobody working on HakiOS has one. Everything here is written from
 Samsung's device trees and the Galaxy S9 port ([hakios-starlte](https://github.com/Scion-Project/hakios-starlte)), which
-has run on an S9. Every status in `device.conf` says "not seen", and every driver is off until its boot-argument. If you
-have an S9+ and want to try, read "First runs" below first, and keep your EFS backup off the phone.
+has run on an S9. Every area in `device.conf` is "missing" (its note says what is written for it), and every
+driver is off until its boot-argument. If you have an S9+ and want to try, read "First runs" below first, and keep
+your EFS backup off the phone.
 
 **The repository.** This is the Galaxy S9+'s device repository, checked out at `devices/star2lte` of
 [Scion-Project/hackios-xnu-kernel](https://github.com/Scion-Project/hackios-xnu-kernel) (`devices/manifest.conf`,
