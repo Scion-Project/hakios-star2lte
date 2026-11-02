@@ -1,0 +1,7 @@
+# build output and editor/merge leftovers; xnu-star2lte.img is written in the kernel tree, never here
+*.img
+*.orig
+*.rej
+*~
+.DS_Store
+__pycache__/
