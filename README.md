@@ -10,8 +10,7 @@ your EFS backup off the phone.
 [Scion-Project/scion-kernel](https://github.com/Scion-Project/scion-kernel) (`devices/manifest.conf`,
 `tools/hakios-device.py sync star2lte`). It shares as much as the tools allow with the S9's:
 
-- `soc/` is the Exynos 9810's layer, a copy of the S9's, byte for byte: the tools take a SoC once and refuse two copies
-  that differ (docs/porting/repositories.md, "The SoC's layer"). A change to it goes to all three repositories at once.
+- The Exynos 9810's layer is `socs/exynos9810` in the common repository, shared with the S9 and the other phones with this SoC.
 - The drivers are the common repository's, the S9's: Samsung's device trees put the same chips at the same addresses and
   pins on all three phones (the table below), and the drivers check for the Exynos 9810's register base, not for the S9.
 - The loader's platform is the S9's, under this phone's name (`xnuloader/loader.c`, `platform_star2lte`, a sibling of
