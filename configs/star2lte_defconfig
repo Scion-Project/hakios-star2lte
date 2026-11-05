@@ -1,5 +1,5 @@
 # HakiOS defconfig for the Samsung Galaxy S9+ (star2lte, SM-G965F, Exynos 9810, devices/star2lte): the common kernel, the Exynos 9810's facts
-# (the same soc/ as the S9's) and this phone's own. Nothing of the phone's is loaded; nothing has run on this phone yet.
+# (socs/exynos9810, shared with the S9) and this phone's own. Nothing of the phone's is loaded; nothing has run on this phone yet.
 #include common_defconfig
 #include exynos9810.config
 #include star2lte.config
