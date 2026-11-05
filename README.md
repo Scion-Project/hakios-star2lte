@@ -1,13 +1,13 @@
 # Samsung Galaxy S9+ (star2lte, SM-G965F, Exynos 9810)
 
 **Nothing in this repository has run on an S9+.** Nobody working on HakiOS has one. Everything here is written from
-Samsung's device trees and the Galaxy S9 port ([hakios-starlte](https://github.com/Scion-Project/hakios-starlte)), which
+Samsung's device trees and the Galaxy S9 port ([scion-starlte](https://github.com/Scion-Project/scion-starlte)), which
 has run on an S9. Every area in `device.conf` is "missing" (its note says what is written for it), and every
 driver is off until its boot-argument. If you have an S9+ and want to try, read "First runs" below first, and keep
 your EFS backup off the phone.
 
 **The repository.** This is the Galaxy S9+'s device repository, checked out at `devices/star2lte` of
-[Scion-Project/hackios-xnu-kernel](https://github.com/Scion-Project/hackios-xnu-kernel) (`devices/manifest.conf`,
+[Scion-Project/scion-kernel](https://github.com/Scion-Project/scion-kernel) (`devices/manifest.conf`,
 `tools/hakios-device.py sync star2lte`). It shares as much as the tools allow with the S9's:
 
 - `soc/` is the Exynos 9810's layer, a copy of the S9's, byte for byte: the tools take a SoC once and refuse two copies
@@ -17,7 +17,7 @@ your EFS backup off the phone.
 - The loader's platform is the S9's, under this phone's name (`xnuloader/loader.c`, `platform_star2lte`, a sibling of
   `platform_starlte`). The only driver that reads the name is the battery's (`drivers/power/hakios.max77705.c`: this
   phone's capacity and thermistor table).
-- `mkimage.sh` is one file, the same in this repository and the other (hakios-crownlte): it takes the phone from the
+- `mkimage.sh` is one file, the same in this repository and the other (scion-crownlte): it takes the phone from the
   directory it is in.
 - There is no UEFI here (below).
 
@@ -108,7 +108,7 @@ make star2lte_defconfig && make kernel && make loader     # the loader with your
 devices/star2lte/mkimage.sh -U -s 60                       # xnu-star2lte.img: the S9's UEFI, a 60 s run
 ```
 
-The universal TWRP installer (Scion-Project/scion-packaging, `universal/`) makes this phone's boot image the same way.
+The universal TWRP installer (Scion-Project/scion-installer, `universal/`) makes this phone's boot image the same way.
 
 ## First runs
 
